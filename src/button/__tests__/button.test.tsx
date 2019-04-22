@@ -5,7 +5,9 @@ import { Button } from "../index";
 
 describe("Button test suite", () => {
   test("Snapshot test", () => {
-    const tree = renderer.create(<Button>Facebook</Button>).toJSON();
+    const tree = renderer
+      .create(<Button variant="primary">Facebook</Button>)
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });

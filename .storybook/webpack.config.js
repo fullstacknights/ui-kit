@@ -5,8 +5,8 @@ const styledComponentsTransformer = createStyledComponentsTransformer();
 
 module.exports = ({ config, mode }) => {
   config.module.rules.push({
-    test: /\.tsx?$/,
-    include: path.resolve(__dirname, "../src"),
+    test: /\.(ts|tsx)$/,
+    include: [path.resolve(__dirname, "../src"), path.resolve(__dirname, "../theme")],
     use: [
     {
       loader: require.resolve("awesome-typescript-loader"),
